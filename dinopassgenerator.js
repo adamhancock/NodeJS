@@ -1,6 +1,5 @@
 // Adam Hancock
 // Run with node dinopassgenerator.js <number of passwords>
-// Execute with node passwordgenerator.js
 // 
 
 var strong = false

@@ -20,7 +20,7 @@ class dinopass {
                 this.url = 'http://www.dinopass.com/password/strong';
             break; 
         }
-
+        this.call();
 
     }
 
@@ -51,4 +51,3 @@ class dinopass {
 }
 
 let dinopassgenerator = new dinopass(process.argv['2'], type);
-dinopassgenerator.call();

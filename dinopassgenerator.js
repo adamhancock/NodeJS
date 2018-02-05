@@ -1,11 +1,15 @@
 // Adam Hancock
-// Set Number of passwords 
+// Run with node dinopassgenerator.js <number of passwords>
 // Execute with node passwordgenerator.js
-var passwords = 45;
+// 
+
 var strong = false
 
-
+var passwords = process.argv['2']
 ////////////////////////////////////////////////////////////////
+
+
+
 var request = require("request");
 switch (strong){
     case false:
@@ -15,6 +19,10 @@ switch (strong){
         url = 'http://www.dinopass.com/password/strong';
     break; 
 }
+// If no passwords set by command line argument, return 45 passwords. 
+if (typeof passwords == 'undefined') {
+   var passwords = '45';
+  }
 
 var options = { method: 'GET',
 url: url};
